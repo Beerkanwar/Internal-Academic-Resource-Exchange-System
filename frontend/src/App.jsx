@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import LoginForm from './modules/auth/components/LoginForm';
+import ResourceList from './modules/resources/components/ResourceList';
+import ResourceUpload from './modules/resources/components/ResourceUpload';
+import VerificationDashboard from './modules/verification/components/VerificationDashboard';
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
               </div>
             } />
             <Route path="/login" element={<LoginForm />} />
+            <Route path="/resources" element={<ResourceList />} />
+            <Route path="/upload" element={<ResourceUpload />} />
+            <Route path="/verification" element={<VerificationDashboard />} />
           </Routes>
         </main>
         <Footer />

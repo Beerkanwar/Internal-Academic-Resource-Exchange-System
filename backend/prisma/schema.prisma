@@ -15,3 +15,22 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+enum ResourceStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model Resource {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  filePath    String
+  subject     String
+  uploaderId  String
+  status      ResourceStatus @default(PENDING)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+

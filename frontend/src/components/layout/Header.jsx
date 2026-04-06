@@ -15,6 +15,7 @@ const Header = () => {
           <ul className="flex space-x-6 text-sm font-medium">
             <li><Link to="/" className="hover:text-yellow-400 transition-colors">Home</Link></li>
             <li><Link to="/resources" className="hover:text-yellow-400 transition-colors">Resources</Link></li>
+            <li><Link to="/verification" className="hover:text-yellow-400 transition-colors">Admin Verification</Link></li>
             <li><Link to="/login" className="hover:text-yellow-400 transition-colors border border-white/30 px-3 py-1 rounded">Login</Link></li>
           </ul>
         </nav>

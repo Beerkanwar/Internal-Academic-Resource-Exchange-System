@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../services/auth.api';
+import { useAuth } from '../../../context/AuthContext';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -7,15 +9,18 @@ const LoginForm = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
     try {
       const data = await loginUser(email, password);
-      // In a real app, save token to localStorage/Context here
-      alert(`Login successful! Token generated.`);
-      console.log('Login Response:', data);
+      // Setup context
+      login(data.token, data.user);
+      navigate('/resources');
     } catch (err) {
       setError(err.message);
     } finally {

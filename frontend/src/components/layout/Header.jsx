@@ -12,11 +12,13 @@ const Header = () => {
           </Link>
         </div>
         <nav className="mt-4 md:mt-0">
-          <ul className="flex space-x-6 text-sm font-medium">
+          <ul className="flex space-x-6 text-sm font-medium items-center">
             <li><Link to="/" className="hover:text-yellow-400 transition-colors">Home</Link></li>
+            <li><Link to="/search" className="hover:text-yellow-400 transition-colors">Search</Link></li>
             <li><Link to="/resources" className="hover:text-yellow-400 transition-colors">Resources</Link></li>
-            <li><Link to="/verification" className="hover:text-yellow-400 transition-colors">Admin Verification</Link></li>
-            <li><Link to="/login" className="hover:text-yellow-400 transition-colors border border-white/30 px-3 py-1 rounded">Login</Link></li>
+            <li><Link to="/verification" className="hover:text-yellow-400 transition-colors">Approve</Link></li>
+            <li><Link to="/admin" className="hover:text-yellow-400 transition-colors border border-red-400 text-red-100 px-2 py-1 rounded">Admin</Link></li>
+            <li><Link to="/login" className="hover:text-yellow-400 transition-colors border border-white/30 px-3 py-1 rounded ml-2">Login</Link></li>
           </ul>
         </nav>
       </div>

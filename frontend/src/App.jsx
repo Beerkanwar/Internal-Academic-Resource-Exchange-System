@@ -6,6 +6,8 @@ import LoginForm from './modules/auth/components/LoginForm';
 import ResourceList from './modules/resources/components/ResourceList';
 import ResourceUpload from './modules/resources/components/ResourceUpload';
 import VerificationDashboard from './modules/verification/components/VerificationDashboard';
+import SearchPage from './modules/search/components/SearchPage';
+import UserManager from './modules/admin/components/UserManager';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
             <Route path="/resources" element={<ResourceList />} />
             <Route path="/upload" element={<ResourceUpload />} />
             <Route path="/verification" element={<VerificationDashboard />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/admin" element={<UserManager />} />
           </Routes>
         </main>
         <Footer />
